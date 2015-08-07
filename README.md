@@ -1,2 +1,2 @@
-# blog
+# Minutemailer Blog
 The blog theme
