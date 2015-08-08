@@ -354,24 +354,42 @@ table {
   margin: 0;
 }
 
+/* line 1, ../resources/sass/atoms/_logo.sass */
+.logo {
+  margin: 0;
+  display: block;
+}
+
 /* line 1, ../resources/sass/molecules/_header.sass */
 .main-header {
-  position: absolute;
-  top: 25px;
-  left: 0;
+  position: relative;
   width: 100%;
+  height: 82px;
+}
+/* line 6, ../resources/sass/molecules/_header.sass */
+.main-header .wrapper {
+  position: relative;
+  height: 82px;
 }
 /* line , ../resources/sass/_config.sass */
 .main-header__logo {
-  float: left;
-}
-/* line 10, ../resources/sass/molecules/_header.sass */
-.main-header__logo.logo {
-  margin-top: 2px;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 /* line , ../resources/sass/_config.sass */
 .main-header__nav {
-  float: right;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
   font-size: 12px;
   line-height: 32px;
 }
