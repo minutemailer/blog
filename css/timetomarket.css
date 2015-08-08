@@ -218,6 +218,16 @@ table {
   border-spacing: 0;
 }
 
+/* line 1, ../resources/sass/framework/_typography.sass */
+html, input, textarea, button {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 4, ../resources/sass/framework/_typography.sass */
+body {
+  text-rendering: optimizeLegibility;
+}
+
 /* line 1, ../resources/sass/framework/_layout.sass */
 .wrapper {
   max-width: 1000px;
@@ -294,13 +304,14 @@ table {
   background: #37d97a;
   color: #fff;
   box-shadow: none;
+  font-weight: 600;
 }
-/* line 57, ../resources/sass/atoms/_buttons.sass */
+/* line 58, ../resources/sass/atoms/_buttons.sass */
 .btn--success:hover {
   background-color: #4cdd88;
   color: #fff;
 }
-/* line 61, ../resources/sass/atoms/_buttons.sass */
+/* line 62, ../resources/sass/atoms/_buttons.sass */
 .btn--success:active {
   background-color: #23ba62;
 }
