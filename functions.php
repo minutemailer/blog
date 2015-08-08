@@ -63,6 +63,13 @@ function timetomarket_setup() {
 
 add_action( 'after_setup_theme', 'timetomarket_setup' );
 
+/** Enqueue and register assets */
+function timetomarket_assets() {
+	wp_enqueue_style( 'timetomarket-style', WEBROOT . 'css/timetomarket.css', false, VERSION, 'screen' );
+}
+
+add_action( 'wp_enqueue_scripts', 'timetomarket_assets' );
+
 /** Retina images */
 add_filter( 'wp_generate_attachment_metadata', 'timetomarket_retina_support_attachment_meta', 10, 2 );
 
