@@ -1,7 +1,12 @@
 <?php get_header(); ?>
 
-		<div class="articles">
+		<?php $description = get_bloginfo( 'description' ); if ( $description && strlen( $description ) > 0 ): ?>
+		<div class="wrapper">
+			<h1 class="section-title"><?php echo $description; ?></h1>
+		</div>
+		<?php endif; ?>
 
+		<div class="articles">
 			<div class="text-wrapper">
 				<?php while ( have_posts() ) : the_post(); ?>
 				<article class="articles__article">

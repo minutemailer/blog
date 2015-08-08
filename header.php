@@ -10,18 +10,4 @@
 	</head>
 
 	<body <?php body_class(); ?>>
-		<header class="main-header">
-			<div class="wrapper">
-				<h1 class="main-header__logo logo">
-					<?php echo TimeToMarket::logo(); ?>
-				</h1>
-				
-				<?php $items = TimeToMarket::menu_items( 'primary' ); if ( $items ): ?>
-				<nav class="main-header__nav">
-					<?php foreach ( $items as $item ): ?>
-						<a href="<?php echo $item->url; ?>" title="<?php echo $item->title; ?>" class="main-header__nav__item btn <?php echo implode( ' ', $item->classes ); ?>"><?php echo $item->post_title; ?></a>
-					<?php endforeach; ?>
-				</nav>
-				<?php endif; ?>
-			</div>
-		</header>
+		<div class="main-content" role="main">

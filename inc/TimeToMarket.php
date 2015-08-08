@@ -26,12 +26,12 @@ class TimeToMarket {
 		}
 
 		if ( $theme_logo ) {
-			$html .= '<img src="' . $theme_logo . '" width="180" alt="' . get_bloginfo( 'name' ) . '">';
+			$html .= '<img src="' . $theme_logo . '" width="180" alt="' . get_bloginfo( 'name' ) . ' logo">';
 		} else {
 			$html .= get_bloginfo( 'name' );
 		}
 
-		if ( is_front_page() && is_home() ) {
+		if ( ! is_front_page() && ! is_home() ) {
 			$html .= '</a>';
 		}
 
