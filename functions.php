@@ -61,6 +61,8 @@ function timetomarket_setup() {
 
 }
 
+add_action( 'after_setup_theme', 'timetomarket_setup' );
+
 /** Retina images */
 add_filter( 'wp_generate_attachment_metadata', 'timetomarket_retina_support_attachment_meta', 10, 2 );
 
