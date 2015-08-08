@@ -118,3 +118,12 @@ function timetomarket_retina_support_create_images( $file, $width, $height, $cro
 	
 	return false;
 }
+
+/** Excerpt length */
+if ( defined( 'EXCERPT_LENGTH' ) ) {
+	function timetomarket_excerpt_length( $length ) {
+		return EXCERPT_LENGTH;
+	}
+
+	add_filter( 'excerpt_length', 'timetomarket_excerpt_length', 999 );
+}

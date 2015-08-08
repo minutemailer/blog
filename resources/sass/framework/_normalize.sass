@@ -46,21 +46,27 @@ body
 // Links
 
 a
+  color: $primary-color
+  text-decoration: none
+  font-weight: 600
+
   // Address `outline` inconsistency between Chrome and other browsers.
   &:focus
     outline: thin dotted
+    text-decoration: underline
 
   // Improve readability when focused and also mouse hovered in all browsers.
   &:active, &:hover
     outline: 0
+    text-decoration: underline
 
 
 // Typography
 
 // Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari 5, and Chrome.
 h1
-  font-size: 2em
-  margin: 0.67em 0
+  font: $headline-font-weight #{$headline-font-size}/#{$headline-line-height} $headline-font-stack
+  margin: 0
 
 // Address styling not present in IE 8/9, Safari 5, and Chrome.
 abbr[title]

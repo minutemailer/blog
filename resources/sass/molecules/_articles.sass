@@ -1,0 +1,29 @@
+.articles
+	margin-top: 40px
+
+	+e(article)
+		padding-top: 30px
+		margin-top: 30px
+		border-top: 1px solid #e1e7ea
+
+		&:first-child
+			padding-top: 0
+			margin-top: 0
+			border-top: none
+
+		p
+			margin-top: 24px
+			font-size: 18px
+
+			& + p
+				margin-top: 16px
+
+		+e(title)
+			font-size: 36px
+
+		+e(meta)
+			margin-top: 5px
+			font-size: 14px
+
+			a
+				text-transform: uppercase

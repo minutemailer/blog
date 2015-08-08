@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /* line 35, ../resources/sass/_config.sass */
-.wrapper:before, .main-header__nav:before, .wrapper:after, .main-header__nav:after {
+.wrapper:before, .text-wrapper:before, .main-header__nav:before, .wrapper:after, .text-wrapper:after, .main-header__nav:after {
   content: "";
   display: table;
 }
 /* line 39, ../resources/sass/_config.sass */
-.wrapper:after, .main-header__nav:after {
+.wrapper:after, .text-wrapper:after, .main-header__nav:after {
   clear: both;
 }
 
@@ -35,7 +35,7 @@ audio:not([controls]) {
 html {
   background: #fff;
   color: #2f3233;
-  font: normal 16px/1.2 "Open Sans", sans-serif;
+  font: 300 20px/1.5 "Open Sans", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -45,71 +45,79 @@ body {
   margin: 0;
 }
 
-/* line 50, ../resources/sass/framework/_normalize.sass */
-a:focus {
-  outline: thin dotted;
+/* line 48, ../resources/sass/framework/_normalize.sass */
+a {
+  color: #39bee6;
+  text-decoration: none;
+  font-weight: 600;
 }
 /* line 54, ../resources/sass/framework/_normalize.sass */
+a:focus {
+  outline: thin dotted;
+  text-decoration: underline;
+}
+/* line 59, ../resources/sass/framework/_normalize.sass */
 a:active, a:hover {
   outline: 0;
+  text-decoration: underline;
 }
 
-/* line 61, ../resources/sass/framework/_normalize.sass */
+/* line 67, ../resources/sass/framework/_normalize.sass */
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+  font: 700 44px/1.2 "Open Sans", sans-serif;
+  margin: 0;
 }
 
-/* line 66, ../resources/sass/framework/_normalize.sass */
+/* line 72, ../resources/sass/framework/_normalize.sass */
 abbr[title] {
   border-bottom: 1px dotted;
 }
 
-/* line 70, ../resources/sass/framework/_normalize.sass */
+/* line 76, ../resources/sass/framework/_normalize.sass */
 b, strong {
   font-weight: bold;
 }
 
-/* line 74, ../resources/sass/framework/_normalize.sass */
+/* line 80, ../resources/sass/framework/_normalize.sass */
 dfn {
   font-style: italic;
 }
 
-/* line 78, ../resources/sass/framework/_normalize.sass */
+/* line 84, ../resources/sass/framework/_normalize.sass */
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
 
-/* line 84, ../resources/sass/framework/_normalize.sass */
+/* line 90, ../resources/sass/framework/_normalize.sass */
 mark {
   background: #ff0;
   color: #000;
 }
 
-/* line 89, ../resources/sass/framework/_normalize.sass */
+/* line 95, ../resources/sass/framework/_normalize.sass */
 code, kbd, pre, samp {
   font-family: monospace, serif;
   font-size: 1em;
 }
 
-/* line 94, ../resources/sass/framework/_normalize.sass */
+/* line 100, ../resources/sass/framework/_normalize.sass */
 pre {
   white-space: pre-wrap;
 }
 
-/* line 98, ../resources/sass/framework/_normalize.sass */
+/* line 104, ../resources/sass/framework/_normalize.sass */
 q {
   quotes: "“" "”" "‘" "’";
 }
 
-/* line 102, ../resources/sass/framework/_normalize.sass */
+/* line 108, ../resources/sass/framework/_normalize.sass */
 small {
   font-size: 80%;
 }
 
-/* line 106, ../resources/sass/framework/_normalize.sass */
+/* line 112, ../resources/sass/framework/_normalize.sass */
 sub, sup {
   font-size: 75%;
   line-height: 0;
@@ -117,102 +125,102 @@ sub, sup {
   vertical-align: baseline;
 }
 
-/* line 112, ../resources/sass/framework/_normalize.sass */
+/* line 118, ../resources/sass/framework/_normalize.sass */
 sup {
   top: -0.5em;
 }
 
-/* line 115, ../resources/sass/framework/_normalize.sass */
+/* line 121, ../resources/sass/framework/_normalize.sass */
 sub {
   bottom: -0.25em;
 }
 
-/* line 122, ../resources/sass/framework/_normalize.sass */
+/* line 128, ../resources/sass/framework/_normalize.sass */
 img {
   border: 0;
 }
 
-/* line 126, ../resources/sass/framework/_normalize.sass */
+/* line 132, ../resources/sass/framework/_normalize.sass */
 svg:not(:root) {
   overflow: hidden;
 }
 
-/* line 133, ../resources/sass/framework/_normalize.sass */
+/* line 139, ../resources/sass/framework/_normalize.sass */
 figure {
   margin: 0;
 }
 
-/* line 140, ../resources/sass/framework/_normalize.sass */
+/* line 146, ../resources/sass/framework/_normalize.sass */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
 
-/* line 145, ../resources/sass/framework/_normalize.sass */
+/* line 151, ../resources/sass/framework/_normalize.sass */
 legend {
   border: 0;
   padding: 0;
 }
 
-/* line 152, ../resources/sass/framework/_normalize.sass */
+/* line 158, ../resources/sass/framework/_normalize.sass */
 button, input, select, textarea {
   font-family: inherit;
   font-size: 100%;
   margin: 0;
 }
 
-/* line 163, ../resources/sass/framework/_normalize.sass */
+/* line 169, ../resources/sass/framework/_normalize.sass */
 button, input {
   line-height: normal;
 }
 
-/* line 170, ../resources/sass/framework/_normalize.sass */
+/* line 176, ../resources/sass/framework/_normalize.sass */
 button, select {
   text-transform: none;
 }
 
-/* line 173, ../resources/sass/framework/_normalize.sass */
+/* line 179, ../resources/sass/framework/_normalize.sass */
 button, html input[type='button'], input[type='reset'], input[type='submit'] {
   -webkit-appearance: button;
   cursor: pointer;
 }
 
-/* line 182, ../resources/sass/framework/_normalize.sass */
+/* line 188, ../resources/sass/framework/_normalize.sass */
 button[disabled], html input[disabled] {
   cursor: default;
 }
 
-/* line 186, ../resources/sass/framework/_normalize.sass */
+/* line 192, ../resources/sass/framework/_normalize.sass */
 input[type='checkbox'], input[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
-/* line 193, ../resources/sass/framework/_normalize.sass */
+/* line 199, ../resources/sass/framework/_normalize.sass */
 input[type='search'] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
-/* line 203, ../resources/sass/framework/_normalize.sass */
+/* line 209, ../resources/sass/framework/_normalize.sass */
 input[type='search']::-webkit-search-cancel-button, input[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* line 207, ../resources/sass/framework/_normalize.sass */
+/* line 213, ../resources/sass/framework/_normalize.sass */
 button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-/* line 211, ../resources/sass/framework/_normalize.sass */
+/* line 217, ../resources/sass/framework/_normalize.sass */
 textarea {
   overflow: auto;
   vertical-align: top;
 }
 
-/* line 222, ../resources/sass/framework/_normalize.sass */
+/* line 228, ../resources/sass/framework/_normalize.sass */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -228,9 +236,29 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* line 7, ../resources/sass/framework/_typography.sass */
+p {
+  margin: 40px 0 0;
+}
+
+/* line 10, ../resources/sass/framework/_typography.sass */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* line 1, ../resources/sass/framework/_layout.sass */
 .wrapper {
   max-width: 1000px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 9, ../resources/sass/framework/_layout.sass */
+.text-wrapper {
+  max-width: 700px;
   padding-left: 20px;
   padding-right: 20px;
   margin-left: auto;
@@ -370,6 +398,19 @@ body {
   margin: 0;
   display: block;
 }
+/* line 5, ../resources/sass/atoms/_logo.sass */
+.logo img {
+  display: block;
+}
+
+/* line 1, ../resources/sass/atoms/_featured-image.sass */
+.featured-image {
+  margin-top: 20px;
+}
+/* line , ../resources/sass/_config.sass */
+.featured-image__img {
+  display: block;
+}
 
 /* line 1, ../resources/sass/molecules/_header.sass */
 .main-header {
@@ -421,4 +462,43 @@ body {
     line-height: 22px;
     font-size: 10px;
   }
+}
+
+/* line 1, ../resources/sass/molecules/_articles.sass */
+.articles {
+  margin-top: 40px;
+}
+/* line , ../resources/sass/_config.sass */
+.articles__article {
+  padding-top: 30px;
+  margin-top: 30px;
+  border-top: 1px solid #e1e7ea;
+}
+/* line 9, ../resources/sass/molecules/_articles.sass */
+.articles__article:first-child {
+  padding-top: 0;
+  margin-top: 0;
+  border-top: none;
+}
+/* line 14, ../resources/sass/molecules/_articles.sass */
+.articles__article p {
+  margin-top: 24px;
+  font-size: 18px;
+}
+/* line 18, ../resources/sass/molecules/_articles.sass */
+.articles__article p + p {
+  margin-top: 16px;
+}
+/* line , ../resources/sass/_config.sass */
+.articles__article__title {
+  font-size: 36px;
+}
+/* line , ../resources/sass/_config.sass */
+.articles__article__meta {
+  margin-top: 5px;
+  font-size: 14px;
+}
+/* line 28, ../resources/sass/molecules/_articles.sass */
+.articles__article__meta a {
+  text-transform: uppercase;
 }

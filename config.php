@@ -15,3 +15,6 @@ define( 'DISABLE_EMOJIS', TRUE );
 
 /** Allow SVG */
 define( 'ALLOW_SVG', TRUE );
+
+/** Excerpt length */
+define( 'EXCERPT_LENGTH', 260 );
