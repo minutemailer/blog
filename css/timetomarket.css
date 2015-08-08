@@ -1,11 +1,11 @@
 @charset "UTF-8";
-/* line 34, ../resources/sass/_config.sass */
-.wrapper:before, .wrapper:after {
+/* line 35, ../resources/sass/_config.sass */
+.wrapper:before, .main-header__nav:before, .wrapper:after, .main-header__nav:after {
   content: "";
   display: table;
 }
-/* line 38, ../resources/sass/_config.sass */
-.wrapper:after {
+/* line 39, ../resources/sass/_config.sass */
+.wrapper:after, .main-header__nav:after {
   clear: both;
 }
 
@@ -220,7 +220,7 @@ table {
 
 /* line 1, ../resources/sass/framework/_layout.sass */
 .wrapper {
-  max-width: 700px;
+  max-width: 1000px;
   padding-left: 20px;
   padding-right: 20px;
   margin-left: auto;
@@ -234,7 +234,6 @@ table {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0 10px;
-  margin: 0 0 0 15px;
   line-height: 32px;
   height: 32px;
   border: 1px solid #666;
@@ -257,21 +256,17 @@ table {
     padding: 0 5px;
   }
 }
-/* line 25, ../resources/sass/atoms/_buttons.sass */
-.btn:first-child {
-  margin-left: 0;
-}
-/* line 28, ../resources/sass/atoms/_buttons.sass */
+/* line 24, ../resources/sass/atoms/_buttons.sass */
 .btn:hover {
   border-color: #a6a6a6;
   color: #a6a6a6;
 }
-/* line 32, ../resources/sass/atoms/_buttons.sass */
+/* line 28, ../resources/sass/atoms/_buttons.sass */
 .btn:active {
   border-color: #39bee6;
   color: #39bee6;
 }
-/* line 36, ../resources/sass/atoms/_buttons.sass */
+/* line 32, ../resources/sass/atoms/_buttons.sass */
 .btn:disabled, .btn.btn-disabled {
   border-color: #dcddde;
   color: #dbddde;
@@ -283,12 +278,12 @@ table {
   font-weight: 600;
   color: #fff;
 }
-/* line 46, ../resources/sass/atoms/_buttons.sass */
+/* line 42, ../resources/sass/atoms/_buttons.sass */
 .btn--primary:hover {
   background-color: #50c5e9;
   border-color: #50c5e9;
 }
-/* line 50, ../resources/sass/atoms/_buttons.sass */
+/* line 46, ../resources/sass/atoms/_buttons.sass */
 .btn--primary:active {
   background-color: #1aa7d2;
   border-color: #1aa7d2;
@@ -298,15 +293,14 @@ table {
   border: none;
   background: #37d97a;
   color: #fff;
-  font-weight: bold;
   box-shadow: none;
 }
-/* line 62, ../resources/sass/atoms/_buttons.sass */
+/* line 57, ../resources/sass/atoms/_buttons.sass */
 .btn--success:hover {
   background-color: #4cdd88;
   color: #fff;
 }
-/* line 66, ../resources/sass/atoms/_buttons.sass */
+/* line 61, ../resources/sass/atoms/_buttons.sass */
 .btn--success:active {
   background-color: #23ba62;
 }
@@ -358,4 +352,44 @@ table {
 .btn--full {
   width: 100%;
   margin: 0;
+}
+
+/* line 1, ../resources/sass/molecules/_header.sass */
+.main-header {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 100%;
+}
+/* line , ../resources/sass/_config.sass */
+.main-header__logo {
+  float: left;
+}
+/* line 10, ../resources/sass/molecules/_header.sass */
+.main-header__logo.logo {
+  margin-top: 2px;
+}
+/* line , ../resources/sass/_config.sass */
+.main-header__nav {
+  float: right;
+  font-size: 12px;
+  line-height: 32px;
+}
+/* line , ../resources/sass/_config.sass */
+.main-header__nav__item {
+  margin-left: 10px;
+  float: left;
+}
+@media (max-width: 830px) {
+  /* line 1, ../resources/sass/molecules/_header.sass */
+  .main-header {
+    top: 12px;
+  }
+}
+@media (max-width: 600px) {
+  /* line , ../resources/sass/_config.sass */
+  .main-header__nav {
+    line-height: 22px;
+    font-size: 10px;
+  }
 }

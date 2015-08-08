@@ -17,9 +17,9 @@
 				</h1>
 				
 				<?php $items = TimeToMarket::menu_items( 'primary' ); if ( $items ): ?>
-				<nav class="nav main-header__nav">
+				<nav class="main-header__nav">
 					<?php foreach ( $items as $item ): ?>
-						<a href="<?php echo $item->url; ?>" title="<?php echo $item->title; ?>" class="nav__item <?php echo implode( ' ', $item->classes ); ?>"><?php echo $item->post_title; ?></a>
+						<a href="<?php echo $item->url; ?>" title="<?php echo $item->title; ?>" class="main-header__nav__item btn <?php echo implode( ' ', $item->classes ); ?>"><?php echo $item->post_title; ?></a>
 					<?php endforeach; ?>
 				</nav>
 				<?php endif; ?>

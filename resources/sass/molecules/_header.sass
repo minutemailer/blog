@@ -1,0 +1,29 @@
+.main-header
+	position: absolute
+	top: 25px
+	left: 0
+	width: 100%
+
+	+e(logo)
+		float: left
+
+		&.logo
+			margin-top: 2px
+
+	+e(nav)
+		float: right
+		font-size: 12px
+		line-height: 32px
+		@extend %clearfix
+
+		+e(item)
+			margin-left: 10px
+			float: left
+
+	@media (max-width: 830px)
+		top: 12px
+
+	@media (max-width: 600px)
+		+e(nav)
+			line-height: 22px
+			font-size: 10px
