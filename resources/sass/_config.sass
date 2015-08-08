@@ -1,0 +1,86 @@
+$elementSeparator:     '__'
+$modifierSeparator:    '--'
+
+// General
+$border-radius:        3px
+$sans-serif:           'Open Sans', sans-serif
+
+// Fonts
+$headline-font-stack:  $sans-serif
+$headline-font-weight: 300
+$headline-font-size:   32px
+$headline-line-height: 40px
+
+$body-font-stack:      $sans-serif
+$body-font-weight:     normal
+$body-font-size:       16px
+$body-line-height:     1.2
+
+// Colors
+$blue:                 #39bee6
+$green:                #37d97a
+$black:                #2f3233
+$white:                #fff
+$primary-color:        $blue
+$background-color:     $white
+$text-color:           $black
+
+// Widths and margins
+$wrapper:              700px
+$gutter:               20px
+
+// Mixins and functions
+%clearfix
+	&:before, &:after
+		content: ""
+		display: table
+
+	&:after
+		clear: both
+
+=bp($point)
+	@if $point == 'gza'
+		@media (min-width: 1400px)
+			@content
+			
+	@if $point == 'ol-dirty-bastard'
+		@media (min-width: 1000px)
+			@content
+
+@function containsModifier($selector)
+	$selector: selectorToString($selector)
+	@if str-index($selector, $modifierSeparator)
+		@return true
+	@else
+		@return false
+
+@function selectorToString($selector)
+	$selector: inspect($selector)
+	//cast to string
+	$selector: str-slice($selector, 2, -2)
+	//remove brackets
+	@return $selector
+
+@function getBlock($selector)
+	$selector: selectorToString($selector)
+	$modifierStart: str-index($selector, $modifierSeparator) - 1
+	@return str-slice($selector, 0, $modifierStart)
+
+=b($block)
+	.#{$block}
+		@content
+
+=e($element)
+	$selector: &
+	@if containsModifier($selector)
+		$block: getBlock($selector)
+		@at-root #{$selector}
+			#{$block + $elementSeparator + $element}
+				@content
+	@else
+		@at-root #{$selector + $elementSeparator + $element}
+			@content
+
+=m($modifier)
+	@at-root #{&}#{$modifierSeparator + $modifier}
+		@content

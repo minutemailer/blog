@@ -1,0 +1,107 @@
+.btn
+	border-radius: $border-radius
+	+box-sizing(border-box)
+	padding: 0 10px
+	margin: 0 0 0 15px
+	line-height: 32px
+	height: 32px
+	border: 1px solid #666
+	text-align: center
+	display: inline-block
+	font-size: 12px
+	font-weight: 400
+	color: #333
+	background: transparent
+	outline: none
+	text-decoration: none
+	cursor: pointer
+
+	@media (max-width: 600px)
+		height: 22px
+		line-height: 20px
+		font-size: 11px
+		padding: 0 5px
+
+	&:first-child
+		margin-left: 0
+
+	&:hover
+		border-color: #a6a6a6
+		color: #a6a6a6
+
+	&:active
+		border-color: #39bee6
+		color: #39bee6
+
+	&:disabled, &.btn-disabled
+		border-color: #dcddde
+		color: #dbddde
+
+	+m(primary)
+		border-color: $primary-color
+		background: $primary-color
+		font-weight: 600
+		color: $white
+
+		&:hover
+			background-color: lighten($primary-color, 5%)
+			border-color: lighten($primary-color, 5%)
+
+		&:active
+			background-color: darken($primary-color, 10%)
+			border-color: darken($primary-color, 10%)
+		
+
+	+m(success)
+		border: none
+		background: $green
+		color: $white
+		font-weight: bold
+		box-shadow: none
+
+		&:hover
+			background-color: lighten($green, 5%)
+			color: $white
+
+		&:active
+			background-color: darken($green, 10%)
+
+	+m(big)
+		font-family: $sans-serif
+		text-transform: uppercase
+		height: 56px
+		line-height: 56px
+		min-width: 150px
+		font-size: 13px
+
+	+m(mega)
+		font-family: $sans-serif
+		text-transform: uppercase
+		height: 64px
+		line-height: 64px
+		min-width: 150px
+		font-size: 14px
+		font-weight: bold
+		letter-spacing: 1px
+		padding-left: 60px
+		padding-right: 60px
+		margin-left: 0
+
+		@media (max-width: 600px)
+			height: 40px
+			line-height: 40px
+			font-size: 11px
+
+	+m(no-padding)
+		padding: 0
+
+	+m(wide)
+		padding: 0 52px
+
+	+m(narrow)
+		min-width: 0
+		padding: 0 30px
+
+	+m(full)
+		width: 100%
+		margin: 0
