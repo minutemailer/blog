@@ -23,7 +23,7 @@ class TimeToMarket {
 		$html       = '';
 
 		if ( ! $startpage ) {
-			$html .= '<a href="' . get_bloginfo( 'url' ) . '">';
+			$html .= '<a href="' . esc_url( home_url() ) . '">';
 		}
 
 		if ( $theme_logo ) {
