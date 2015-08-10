@@ -17,7 +17,7 @@
 
 					<div class="articles__article__body">
 						<?php the_excerpt(); ?>
-						<p><a href="<?php the_permalink(); ?>">Read more</a></p>
+						<p><a href="<?php the_permalink(); ?>"><?php _e( 'Read more', LANG_DOMAIN ); ?></a></p>
 					</div>
 				</article>
 				<?php endwhile; ?>
