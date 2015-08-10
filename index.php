@@ -13,7 +13,7 @@
 					<h1 class="articles__article__title"><?php the_title(); ?></h1>
 					<div class="articles__article__meta"><?php echo get_the_date(); ?> <?php the_category( ', ' ); ?></div>
 
-					<div class="featured-image"><img class="featured-image__img" src="http://placehold.it/700x250"></div>
+					<?php TimeToMarket::featuredImage(); ?>
 
 					<div class="articles__article__body">
 						<?php the_excerpt(); ?>

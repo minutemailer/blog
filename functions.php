@@ -127,3 +127,11 @@ if ( defined( 'EXCERPT_LENGTH' ) ) {
 
 	add_filter( 'excerpt_length', 'timetomarket_excerpt_length', 999 );
 }
+
+/** Featured image HTML */
+function timetomarket_featured_image_html( $html, $post_id, $post_image_id ) {
+	$html = '<div class="featured-image">' . $html . '</div>';
+	return $html;
+}
+
+add_filter( 'post_thumbnail_html', 'timetomarket_featured_image_html', 10, 3 );

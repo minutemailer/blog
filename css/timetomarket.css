@@ -424,8 +424,8 @@ img {
 .featured-image {
   margin-top: 20px;
 }
-/* line , ../resources/sass/_config.sass */
-.featured-image__img {
+/* line 4, ../resources/sass/atoms/_featured-image.sass */
+.featured-image img {
   display: block;
 }
 
