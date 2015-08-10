@@ -280,6 +280,7 @@ img {
 /* line 17, ../resources/sass/framework/_layout.sass */
 .main-content {
   margin-top: 82px;
+  padding-bottom: 60px;
 }
 
 /* line 1, ../resources/sass/atoms/_buttons.sass */
@@ -535,4 +536,18 @@ img {
 /* line 32, ../resources/sass/molecules/_articles.sass */
 .articles__article__meta a {
   text-transform: uppercase;
+}
+
+/* line 1, ../resources/sass/molecules/_pagination.sass */
+.pagination {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 16px;
+}
+/* line 6, ../resources/sass/molecules/_pagination.sass */
+.pagination a {
+  color: #2f3233;
+  text-decoration: underline;
+  font-weight: 300;
+  margin: 0 20px;
 }

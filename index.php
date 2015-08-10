@@ -24,4 +24,17 @@
 			</div>
 		</div>
 
+		<?php
+
+			global $wp_query;
+			$max_pages = $wp_query->max_num_pages;
+
+			if ( $max_pages > 1 ):
+
+		?>
+		<div class="pagination">
+			<?php next_posts_link( __( 'Older posts', LANG_DOMAIN ), $max_pages ); ?><?php previous_posts_link( __( 'Newer posts', LANG_DOMAIN ) ); ?>
+		</div>
+		<?php endif; ?>
+
 <?php get_footer(); ?>
