@@ -522,12 +522,17 @@ img {
 .articles__article__title {
   font-size: 36px;
 }
+/* line 24, ../resources/sass/molecules/_articles.sass */
+.articles__article__title a {
+  font-weight: bold;
+  color: #2f3233;
+}
 /* line , ../resources/sass/_config.sass */
 .articles__article__meta {
   margin-top: 5px;
   font-size: 14px;
 }
-/* line 28, ../resources/sass/molecules/_articles.sass */
+/* line 32, ../resources/sass/molecules/_articles.sass */
 .articles__article__meta a {
   text-transform: uppercase;
 }

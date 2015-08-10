@@ -10,14 +10,14 @@
 			<div class="text-wrapper">
 				<?php while ( have_posts() ) : the_post(); ?>
 				<article class="articles__article">
-					<h1 class="articles__article__title"><?php the_title(); ?></h1>
+					<?php the_title( sprintf( '<h1 class="articles__article__title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 					<div class="articles__article__meta"><?php echo get_the_date(); ?> <?php the_category( ', ' ); ?></div>
 
 					<?php TimeToMarket::featuredImage(); ?>
 
 					<div class="articles__article__body">
 						<?php the_excerpt(); ?>
-						<p><a href="/">Read more</a></p>
+						<p><a href="<?php the_permalink(); ?>">Read more</a></p>
 					</div>
 				</article>
 				<?php endwhile; ?>
