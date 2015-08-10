@@ -19,9 +19,10 @@ class TimeToMarket {
 
 	public static function logo() {
 		$theme_logo = get_theme_mod( 'minutemailer_logo' );
+		$startpage  = is_front_page() && is_home() && ! is_paged();
 		$html       = '';
 
-		if ( ! is_front_page() && ! is_home() ) {
+		if ( ! $startpage ) {
 			$html .= '<a href="' . get_bloginfo( 'url' ) . '">';
 		}
 
@@ -31,7 +32,7 @@ class TimeToMarket {
 			$html .= get_bloginfo( 'name' );
 		}
 
-		if ( ! is_front_page() && ! is_home() ) {
+		if ( ! $startpage ) {
 			$html .= '</a>';
 		}
 
