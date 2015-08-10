@@ -24,7 +24,7 @@ class TimeToMarket {
 			return false;
 		}
 
-		return wp_get_nav_menu_items( $found_menu );
+		return wp_get_nav_menu_items( $menu );
 	}
 
 	public static function menu_name( $location ) {
