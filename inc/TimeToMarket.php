@@ -2,7 +2,7 @@
 
 class TimeToMarket {
 
-	public static function menu_items( $location ) {
+	public static function get_menu( $location ) {
 		$menus          = wp_get_nav_menus();
 		$menu_locations = get_nav_menu_locations();
 		$found_menu     = null;
@@ -14,7 +14,27 @@ class TimeToMarket {
 			}
 		}
 
+		return $found_menu;
+	}
+
+	public static function menu_items( $location ) {
+		$menu = self::get_menu( $location );
+
+		if ( ! $menu ) {
+			return false;
+		}
+
 		return wp_get_nav_menu_items( $found_menu );
+	}
+
+	public static function menu_name( $location ) {
+		$menu = self::get_menu( $location );
+
+		if ( ! $menu ) {
+			return false;
+		}
+		
+		return $menu->name;
 	}
 
 	public static function logo() {

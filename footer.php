@@ -18,6 +18,52 @@
 					<?php endif; ?>
 				</div>
 			</header>
+
+			<footer class="main-footer">
+				<div class="wrapper">
+					<div class="main-footer__columns">
+						<div class="main-footer__columns__column">
+							<?php $menu = TimeToMarket::get_menu( 'footer-1' ); if ( $menu ): ?>
+							<strong class="main-footer__columns__column__title"><?php echo $menu->name; ?></strong>
+
+							<ul class="main-footer__columns__column__links">
+								<?php $items = wp_get_nav_menu_items( $menu ); foreach ( $items as $item ): ?>
+								<li class="main-footer__columns__column__links__link"><a href="<?php echo $item->url; ?>" title="<?php echo $item->title; ?>"><?php echo $item->post_title; ?></a></li>
+								<?php endforeach; ?>
+							</ul>
+							<?php endif; ?>
+						</div>
+						<div class="main-footer__columns__column">
+							<?php $menu = TimeToMarket::get_menu( 'footer-2' ); if ( $menu ): ?>
+							<strong class="main-footer__columns__column__title"><?php echo $menu->name; ?></strong>
+
+							<ul class="main-footer__columns__column__links">
+								<?php $items = wp_get_nav_menu_items( $menu ); foreach ( $items as $item ): ?>
+								<li class="main-footer__columns__column__links__link"><a href="<?php echo $item->url; ?>" title="<?php echo $item->title; ?>"><?php echo $item->post_title; ?></a></li>
+								<?php endforeach; ?>
+							</ul>
+							<?php endif; ?>
+						</div>
+						<div class="main-footer__columns__column">
+							<?php $menu = TimeToMarket::get_menu( 'footer-3' ); if ( $menu ): ?>
+							<strong class="main-footer__columns__column__title"><?php echo $menu->name; ?></strong>
+
+							<ul class="main-footer__columns__column__links">
+								<?php $items = wp_get_nav_menu_items( $menu ); foreach ( $items as $item ): ?>
+								<li class="main-footer__columns__column__links__link"><a href="<?php echo $item->url; ?>" title="<?php echo $item->title; ?>"><?php echo $item->post_title; ?></a></li>
+								<?php endforeach; ?>
+							</ul>
+							<?php endif; ?>
+						</div>
+						<div class="main-footer__columns__column">
+							<div class="logo">
+								<?php echo TimeToMarket::logo(); ?>
+							</div>
+							<p class="main-footer__copyright">© <?php bloginfo( 'name' ); ?> <?php echo date( 'Y' ); ?>.<br> All rights reserved.</p>
+						</div>
+					</div>
+				</div>
+			</footer>
 		</div>
 
 		<?php wp_footer(); ?>

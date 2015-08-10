@@ -1,0 +1,52 @@
+.main-footer
+	padding: 40px 0
+	border-top: 1px solid #dce3e6
+
+	+e(copyright)
+		margin: 10px 0 0
+		color: #b2b2b2
+
+	+e(columns)
+		+display-flex
+		margin: 0 0 0 -20px
+
+		+e(column)
+			padding-left: 20px
+			font-size: 13px
+			color: #2f3233
+			+flex(1)
+
+			+e(title)
+				font-weight: 600
+				text-transform: uppercase
+				display: block
+
+			+e(links)
+				margin: 0
+				padding: 0
+				list-style: none
+
+				+e(link)
+					display: block
+					margin-top: 15px
+
+					a
+						text-decoration: none
+						color: #2f3233
+						display: block
+
+						&:hover
+							text-decoration: underline
+
+	@media (max-width: 700px)
+		padding: 20px 0
+
+		+e(columns)
+			+flex-wrap(wrap)
+			margin-top: -40px
+
+			+e(column)
+				+flex(none)
+				width: 50%
+				+box-sizing(border-box)
+				margin-top: 40px

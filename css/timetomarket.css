@@ -33,7 +33,7 @@ audio:not([controls]) {
 
 /* line 27, ../resources/sass/framework/_normalize.sass */
 html {
-  background: #fff;
+  background: #f9fbfc;
   color: #2f3233;
   font: 300 20px/1.5 "Open Sans", sans-serif;
   -ms-text-size-adjust: 100%;
@@ -307,8 +307,9 @@ ul, ol {
 
 /* line 17, ../resources/sass/framework/_layout.sass */
 .main-content {
-  margin-top: 82px;
+  padding-top: 82px;
   padding-bottom: 60px;
+  background: #fff;
 }
 
 /* line 1, ../resources/sass/atoms/_buttons.sass */
@@ -584,4 +585,78 @@ ul, ol {
 /* line 1, ../resources/sass/molecules/_article.sass */
 .article {
   margin-top: 40px;
+}
+
+/* line 1, ../resources/sass/molecules/_footer.sass */
+.main-footer {
+  padding: 40px 0;
+  border-top: 1px solid #dce3e6;
+}
+/* line , ../resources/sass/_config.sass */
+.main-footer__copyright {
+  margin: 10px 0 0;
+  color: #b2b2b2;
+}
+/* line , ../resources/sass/_config.sass */
+.main-footer__columns {
+  display: -webkit-flex;
+  display: flex;
+  margin: 0 0 0 -20px;
+}
+/* line , ../resources/sass/_config.sass */
+.main-footer__columns__column {
+  padding-left: 20px;
+  font-size: 13px;
+  color: #2f3233;
+  -webkit-flex: 1;
+  flex: 1;
+}
+/* line , ../resources/sass/_config.sass */
+.main-footer__columns__column__title {
+  font-weight: 600;
+  text-transform: uppercase;
+  display: block;
+}
+/* line , ../resources/sass/_config.sass */
+.main-footer__columns__column__links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line , ../resources/sass/_config.sass */
+.main-footer__columns__column__links__link {
+  display: block;
+  margin-top: 15px;
+}
+/* line 33, ../resources/sass/molecules/_footer.sass */
+.main-footer__columns__column__links__link a {
+  text-decoration: none;
+  color: #2f3233;
+  display: block;
+}
+/* line 38, ../resources/sass/molecules/_footer.sass */
+.main-footer__columns__column__links__link a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 700px) {
+  /* line 1, ../resources/sass/molecules/_footer.sass */
+  .main-footer {
+    padding: 20px 0;
+  }
+  /* line , ../resources/sass/_config.sass */
+  .main-footer__columns {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: -40px;
+  }
+  /* line , ../resources/sass/_config.sass */
+  .main-footer__columns__column {
+    -webkit-flex: none;
+    flex: none;
+    width: 50%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top: 40px;
+  }
 }
