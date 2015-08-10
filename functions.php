@@ -65,7 +65,8 @@ add_action( 'after_setup_theme', 'timetomarket_setup' );
 
 /** Enqueue and register assets */
 function timetomarket_assets() {
-	wp_enqueue_style( 'timetomarket-style', WEBROOT . 'css/timetomarket.css', false, VERSION, 'screen' );
+	wp_enqueue_style( 'timetomarket-style', WEBROOT . 'css/timetomarket.css', FALSE, VERSION, 'screen' );
+	wp_enqueue_script( 'retinajs', WEBROOT . 'js/vendor/imulus/retina.js', FALSE, NULL, TRUE );
 }
 
 add_action( 'wp_enqueue_scripts', 'timetomarket_assets' );
