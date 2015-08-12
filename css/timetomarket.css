@@ -280,13 +280,48 @@ blockquote {
   font-style: italic;
   border-left: 10px solid #e1e7ea;
   padding-left: 20px;
+  margin: 40px 40px 0;
 }
 
-/* line 31, ../resources/sass/framework/_typography.sass */
+/* line 32, ../resources/sass/framework/_typography.sass */
 ul, ol {
   margin: 40px 0 0;
 }
 
+@media (max-width: 700px) {
+  /* line 36, ../resources/sass/framework/_typography.sass */
+  html {
+    font-size: 13px;
+  }
+
+  /* line 39, ../resources/sass/framework/_typography.sass */
+  h1 {
+    font-size: 22px;
+  }
+
+  /* line 42, ../resources/sass/framework/_typography.sass */
+  h2, h3, h4 {
+    margin: 20px 0 -15px;
+    font-size: 16px;
+  }
+
+  /* line 46, ../resources/sass/framework/_typography.sass */
+  h3 {
+    font-size: 13px;
+  }
+
+  /* line 49, ../resources/sass/framework/_typography.sass */
+  p {
+    margin-top: 20px;
+  }
+
+  /* line 52, ../resources/sass/framework/_typography.sass */
+  blockquote {
+    margin: 20px 20px 0;
+    padding-left: 10px;
+    border-left-width: 5px;
+  }
+}
 /* line 1, ../resources/sass/framework/_layout.sass */
 .wrapper {
   max-width: 1000px;
@@ -312,6 +347,25 @@ ul, ol {
   background: #fff;
 }
 
+@media (max-width: 700px) {
+  /* line 24, ../resources/sass/framework/_layout.sass */
+  .wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* line 28, ../resources/sass/framework/_layout.sass */
+  .text-wrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  /* line 32, ../resources/sass/framework/_layout.sass */
+  .main-content {
+    padding-top: 46px;
+    padding-bottom: 30px;
+  }
+}
 /* line 1, ../resources/sass/atoms/_buttons.sass */
 .btn {
   border-radius: 3px;
@@ -332,7 +386,7 @@ ul, ol {
   text-decoration: none;
   cursor: pointer;
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   /* line 1, ../resources/sass/atoms/_buttons.sass */
   .btn {
     height: 22px;
@@ -413,7 +467,7 @@ ul, ol {
   padding-right: 60px;
   margin-left: 0;
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   /* line , ../resources/sass/_config.sass */
   .btn--mega {
     height: 40px;
@@ -444,10 +498,17 @@ ul, ol {
 .logo {
   margin: 0;
   display: block;
+  width: 180px;
 }
-/* line 5, ../resources/sass/atoms/_logo.sass */
+/* line 6, ../resources/sass/atoms/_logo.sass */
 .logo img {
   display: block;
+}
+@media (max-width: 700px) {
+  /* line 1, ../resources/sass/atoms/_logo.sass */
+  .logo {
+    width: 135px;
+  }
 }
 
 /* line 1, ../resources/sass/atoms/_featured-image.sass */
@@ -469,6 +530,14 @@ ul, ol {
   border-bottom: 1px solid #e1e7ea;
   margin-top: 40px;
 }
+@media (max-width: 700px) {
+  /* line 1, ../resources/sass/atoms/_section-title.sass */
+  .section-title {
+    font-size: 27px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+}
 
 /* line 1, ../resources/sass/atoms/_meta.sass */
 .meta {
@@ -478,6 +547,12 @@ ul, ol {
 /* line 5, ../resources/sass/atoms/_meta.sass */
 .meta a {
   text-transform: uppercase;
+}
+@media (max-width: 700px) {
+  /* line 1, ../resources/sass/atoms/_meta.sass */
+  .meta {
+    font-size: 10px;
+  }
 }
 
 /* line 1, ../resources/sass/molecules/_header.sass */
@@ -519,17 +594,22 @@ ul, ol {
   margin-left: 10px;
   float: left;
 }
-@media (max-width: 830px) {
+@media (max-width: 700px) {
   /* line 1, ../resources/sass/molecules/_header.sass */
   .main-header {
-    top: 12px;
+    height: 46px;
   }
-}
-@media (max-width: 600px) {
+  /* line 33, ../resources/sass/molecules/_header.sass */
+  .main-header .wrapper {
+    height: 46px;
+  }
+  /* line , ../resources/sass/_config.sass */
+  .main-header__logo {
+    left: 10px;
+  }
   /* line , ../resources/sass/_config.sass */
   .main-header__nav {
-    line-height: 22px;
-    font-size: 10px;
+    right: 10px;
   }
 }
 
@@ -567,6 +647,35 @@ ul, ol {
   font-weight: bold;
   color: #2f3233;
 }
+@media (max-width: 700px) {
+  /* line 1, ../resources/sass/molecules/_articles.sass */
+  .articles {
+    margin-top: 20px;
+  }
+  /* line , ../resources/sass/_config.sass */
+  .articles__article {
+    padding-top: 15px;
+    margin-top: 15px;
+  }
+  /* line 35, ../resources/sass/molecules/_articles.sass */
+  .articles__article:first-child {
+    padding-top: 0;
+    margin-top: 0;
+  }
+  /* line , ../resources/sass/_config.sass */
+  .articles__article__title {
+    font-size: 18px;
+  }
+  /* line 42, ../resources/sass/molecules/_articles.sass */
+  .articles__article p {
+    font-size: 13px;
+    margin-top: 12px;
+  }
+  /* line 46, ../resources/sass/molecules/_articles.sass */
+  .articles__article p + p {
+    margin-top: 8px;
+  }
+}
 
 /* line 1, ../resources/sass/molecules/_pagination.sass */
 .pagination {
@@ -581,10 +690,31 @@ ul, ol {
   font-weight: 300;
   margin: 0 20px;
 }
+@media (max-width: 700px) {
+  /* line 1, ../resources/sass/molecules/_pagination.sass */
+  .pagination {
+    margin-top: 20px;
+    font-size: 13px;
+  }
+  /* line 16, ../resources/sass/molecules/_pagination.sass */
+  .pagination a {
+    margin: 0 10px;
+  }
+}
 
 /* line 1, ../resources/sass/molecules/_article.sass */
 .article {
   margin-top: 40px;
+}
+@media (max-width: 700px) {
+  /* line 1, ../resources/sass/molecules/_article.sass */
+  .article {
+    margin-top: 20px;
+  }
+  /* line 7, ../resources/sass/molecules/_article.sass */
+  .article .featured-image {
+    margin: 10px -40px 0;
+  }
 }
 
 /* line 1, ../resources/sass/molecules/_footer.sass */
