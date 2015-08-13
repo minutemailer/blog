@@ -291,23 +291,23 @@ ul, ol {
 @media (max-width: 700px) {
   /* line 36, ../resources/sass/framework/_typography.sass */
   html {
-    font-size: 13px;
+    font-size: 16px;
   }
 
   /* line 39, ../resources/sass/framework/_typography.sass */
   h1 {
-    font-size: 22px;
+    font-size: 26px;
   }
 
   /* line 42, ../resources/sass/framework/_typography.sass */
   h2, h3, h4 {
     margin: 20px 0 -15px;
-    font-size: 16px;
+    font-size: 20px;
   }
 
   /* line 46, ../resources/sass/framework/_typography.sass */
   h3 {
-    font-size: 13px;
+    font-size: 16px;
   }
 
   /* line 49, ../resources/sass/framework/_typography.sass */
@@ -356,8 +356,8 @@ ul, ol {
 
   /* line 28, ../resources/sass/framework/_layout.sass */
   .text-wrapper {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   /* line 32, ../resources/sass/framework/_layout.sass */
@@ -583,6 +583,28 @@ ul, ol {
 /* line 12, ../resources/sass/atoms/_blog-home.sass */
 .blog-home a {
   font-weight: 400;
+  text-decoration: none !important;
+}
+@media (max-width: 700px) {
+  /* line 1, ../resources/sass/atoms/_blog-home.sass */
+  .blog-home {
+    left: 0;
+    top: auto;
+    bottom: auto;
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    padding-top: 2px;
+    padding-left: 0;
+    margin-left: 0;
+    border-left: none;
+    border-top: 1px solid #39bee6;
+    margin-top: 2px;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* line 1, ../resources/sass/molecules/_header.sass */
@@ -747,7 +769,7 @@ ul, ol {
   }
   /* line 7, ../resources/sass/molecules/_article.sass */
   .article .featured-image {
-    margin: 10px -40px 0;
+    margin: 10px -20px 0;
   }
 }
 
