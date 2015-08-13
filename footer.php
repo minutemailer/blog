@@ -59,7 +59,7 @@
 							<div class="logo">
 								<?php echo TimeToMarket::logo(); ?>
 							</div>
-							<p class="main-footer__copyright">© <?php bloginfo( 'name' ); ?> <?php echo date( 'Y' ); ?>.<br> All rights reserved.</p>
+							<p class="main-footer__copyright">© <?php echo get_option( 'ttm_company_name' ); ?> <?php echo date( 'Y' ); ?>.<br> All rights reserved.</p>
 						</div>
 					</div>
 				</div>
