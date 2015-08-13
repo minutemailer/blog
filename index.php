@@ -15,7 +15,7 @@
 
 					<div class="articles__article__body">
 						<?php the_excerpt(); ?>
-						<p><a href="<?php the_permalink(); ?>"><?php _e( 'Read more', LANG_DOMAIN ); ?></a></p>
+						<p><a href="<?php the_permalink(); ?>"><?php _e( 'Read more', 'timetomarket' ); ?></a></p>
 					</div>
 				</article>
 				<?php endwhile; ?>
@@ -31,7 +31,7 @@
 
 		?>
 		<div class="pagination">
-			<?php next_posts_link( __( 'Older posts', LANG_DOMAIN ), $max_pages ); ?><?php previous_posts_link( __( 'Newer posts', LANG_DOMAIN ) ); ?>
+			<?php next_posts_link( __( 'Older posts', 'timetomarket' ), $max_pages ); ?><?php previous_posts_link( __( 'Newer posts', 'timetomarket' ) ); ?>
 		</div>
 		<?php endif; ?>
 

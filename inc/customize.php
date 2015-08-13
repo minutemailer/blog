@@ -8,7 +8,7 @@ class TimeToMarket_Customize {
 		$wp_customize->add_section(
 			'minutemailer_brand_options',
 			[
-				'title'    => __( 'Brand options', LANG_DOMAIN ),
+				'title'    => __( 'Brand options', 'timetomarket' ),
 				'priority' => 201
 			]
 		);
@@ -24,7 +24,7 @@ class TimeToMarket_Customize {
 				$wp_customize,
 				'logo',
 				[
-					'label'      => __( 'Upload a logo', LANG_DOMAIN ),
+					'label'      => __( 'Upload a logo', 'timetomarket' ),
 					'section'    => 'minutemailer_brand_options',
 					'settings'   => 'minutemailer_logo',
 					'context'    => 'minutemailer_options' 

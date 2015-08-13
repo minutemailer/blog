@@ -1,7 +1,7 @@
 <?php
 
 /** GLOBALS */
-define( 'LANG_DOMAIN', 'timetomarket' );
+
 
 /** DEV Version */
 define( 'VERSION', time() );

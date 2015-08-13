@@ -10,5 +10,5 @@
 		<?php wp_head(); ?>
 	</head>
 
-	<body <?php body_class(); ?>>
+	<body>
 		<div class="main-content" role="main">

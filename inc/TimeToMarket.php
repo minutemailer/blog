@@ -75,10 +75,10 @@ class TimeToMarket {
 		global $wp_query;
 		
 		if ( is_category() ) {
-			$title = single_cat_title( '', FALSE ) . ' ' . __( 'posts', LANG_DOMAIN );
+			$title = single_cat_title( '', FALSE ) . ' ' . __( 'posts', 'timetomarket' );
 		} elseif ( is_author() ) {
 			$author_obj = $wp_query->get_queried_object();
-			$title = __( 'Posts by', LANG_DOMAIN ) . ' ' . $author_obj->display_name;
+			$title = sprintf( __( 'Posts by % s', 'timetomarket' ), $author_obj->display_name );
 		} else {
 			$title = get_bloginfo( 'name' );
 		}
@@ -88,7 +88,7 @@ class TimeToMarket {
 		$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
 		if ( $paged > 1 ) {
-			$html .= '<span class="section-title__sub">' . __( 'Page', LANG_DOMAIN ) . ' ' . $paged . ' ' . __( 'out of', LANG_DOMAIN ) . ' ' . $wp_query->max_num_pages . '</span>';
+			$html .= '<span class="section-title__sub">' . __( 'Page', 'timetomarket' ) . ' ' . $paged . ' ' . __( 'out of', 'timetomarket' ) . ' ' . $wp_query->max_num_pages . '</span>';
 		}
 
 		$html .= '</header>';

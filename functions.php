@@ -32,7 +32,7 @@ if ( defined( 'ALLOW_SVG' ) && ALLOW_SVG ) {
 /** Setup */
 function timetomarket_setup() {
 
-	load_theme_textdomain( LANG_DOMAIN, DOCROOT . 'languages' );
+	load_theme_textdomain( 'timetomarket', DOCROOT . 'languages' );
 
 	/** Add default posts and comments RSS feed links to head. */
 	add_theme_support( 'automatic-feed-links' );
@@ -46,7 +46,7 @@ function timetomarket_setup() {
 
 	$image_sizes = function ( $sizes ) {
 		$newsizes = array_merge( $sizes, [
-			'timetomarket-full-width' => __( 'Full width post image', LANG_DOMAIN ),
+			'timetomarket-full-width' => __( 'Full width post image', 'timetomarket' ),
 		] );
 
 		return $newsizes;
@@ -56,10 +56,10 @@ function timetomarket_setup() {
 
 	/** Register nav menus */
 	register_nav_menus( [
-		'primary'  => __( 'Main menu', LANG_DOMAIN ),
-		'footer-1' => __( 'Footer menu 1', LANG_DOMAIN ),
-		'footer-2' => __( 'Footer menu 2', LANG_DOMAIN ),
-		'footer-3' => __( 'Footer menu 2', LANG_DOMAIN )
+		'primary'  => __( 'Main menu', 'timetomarket' ),
+		'footer-1' => __( 'Footer menu 1', 'timetomarket' ),
+		'footer-2' => __( 'Footer menu 2', 'timetomarket' ),
+		'footer-3' => __( 'Footer menu 2', 'timetomarket' )
 	] );
 
 }

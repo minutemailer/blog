@@ -13,13 +13,13 @@ class TimeToMarketSettings {
 	}
 
 	public function add_page() {
-		add_options_page( __( 'Company Settings', LANG_DOMAIN ), __( 'Company', LANG_DOMAIN ), 'manage_options', 'ttm_company_settings', [&$this, 'page_content'] );
+		add_options_page( __( 'Company Settings', 'timetomarket' ), __( 'Company', 'timetomarket' ), 'manage_options', 'ttm_company_settings', [&$this, 'page_content'] );
 	}
 
 	public function page_content() {
 		?>
 		<div class="wrap">
-			<h2><?php _e('Company Settings', LANG_DOMAIN ); ?></h2>
+			<h2><?php _e('Company Settings', 'timetomarket' ); ?></h2>
 			<form action="options.php" method="POST">
 				<?php settings_fields('ttm_company_settings_group'); ?>
 				<?php do_settings_sections('ttm_company_settings'); ?>
@@ -47,7 +47,7 @@ class TimeToMarketSettings {
 
 		add_settings_field(
 			'ttm_company_' . $key . '_field',
-			'<label for="ttm_company_' . $key . '_id">' . __( $setting , LANG_DOMAIN ) . '</label>',
+			'<label for="ttm_company_' . $key . '_id">' . __( $setting , 'timetomarket' ) . '</label>',
 			$html,
 			'ttm_company_settings',
 			'section_1'
