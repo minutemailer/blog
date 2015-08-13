@@ -38,7 +38,7 @@ class TimeToMarketSettings {
 	}
 
 	public function register_setting( $key, $setting ) {
-		register_setting( 'ttm_company_settings_group', 'ttm_company_' . $setting, 'esc_attr' );
+		register_setting( 'ttm_company_settings_group', 'ttm_company_' . $key, 'esc_attr' );
 
 		$html = function () use ( $key ) {
 			$value = get_option( 'ttm_company_' . $key, '' );
