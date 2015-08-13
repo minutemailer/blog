@@ -1,7 +1,7 @@
 		</div>
 
 		<div class="company">
-			<h1 class="seo-only"><?php bloginfo( 'name' ); ?></h1>
+			<h1 class="seo-only"><?php echo get_option( 'ttm_company_name' ); ?></h1>
 
 			<header class="main-header">
 				<div class="wrapper">

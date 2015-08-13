@@ -6,6 +6,9 @@ include TEMPLATEPATH . '/config.php';
 /** Customize */
 include TEMPLATEPATH . '/inc/customize.php';
 
+/** Admin settings */
+include TEMPLATEPATH . '/inc/settings.php';
+
 /** Theme Class */
 include TEMPLATEPATH . '/inc/TimeToMarket.php';
 

@@ -1,10 +1,8 @@
 <?php get_header(); ?>
 
-		<?php $description = get_bloginfo( 'description' ); if ( $description && strlen( $description ) > 0 ): ?>
 		<div class="wrapper">
-			<h1 class="section-title"><?php echo $description; ?></h1>
+			<h1 class="section-title"><?php bloginfo( 'name' ); ?></h1>
 		</div>
-		<?php endif; ?>
 
 		<div class="articles">
 			<div class="text-wrapper">

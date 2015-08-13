@@ -39,22 +39,15 @@ class TimeToMarket {
 
 	public static function logo() {
 		$theme_logo = get_theme_mod( 'minutemailer_logo' );
-		$startpage  = is_front_page() && is_home() && ! is_paged();
-		$html       = '';
-
-		if ( ! $startpage ) {
-			$html .= '<a href="' . esc_url( home_url() ) . '">';
-		}
+		$html       = '<a href="' . esc_url( get_option( 'ttm_company_url' ) ) . '">';
 
 		if ( $theme_logo ) {
-			$html .= '<img src="' . $theme_logo . '" width="180" alt="' . get_bloginfo( 'name' ) . ' logo">';
+			$html .= '<img src="' . $theme_logo . '" width="180" alt="' . get_option( 'ttm_company_name' ) . ' logo">';
 		} else {
 			$html .= get_bloginfo( 'name' );
 		}
 
-		if ( ! $startpage ) {
-			$html .= '</a>';
-		}
+		$html .= '</a>';
 
 		return $html;
 	}
