@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-		<article id="post-<?php the_ID(); ?>" <?php post_class( 'article' ); ?>>
+		<div id="post-<?php the_ID(); ?>" <?php post_class( 'article' ); ?>>
 			<div class="text-wrapper">
 				<?php while ( have_posts() ) : the_post(); ?>
 				<h1 class="article__title"><?php the_title(); ?></h1>
@@ -13,6 +13,6 @@
 				</div>
 				<?php endwhile; ?>
 			</div>
-		</article>
+		</div>
 
 <?php get_footer(); ?>
