@@ -287,35 +287,39 @@ blockquote {
 ul, ol {
   margin: 40px 0 0;
 }
+/* line 35, ../resources/sass/framework/_typography.sass */
+ul > li, ol > li {
+  margin-top: 10px;
+}
 
 @media (max-width: 700px) {
-  /* line 36, ../resources/sass/framework/_typography.sass */
+  /* line 39, ../resources/sass/framework/_typography.sass */
   html {
     font-size: 16px;
   }
 
-  /* line 39, ../resources/sass/framework/_typography.sass */
+  /* line 42, ../resources/sass/framework/_typography.sass */
   h1 {
     font-size: 26px;
   }
 
-  /* line 42, ../resources/sass/framework/_typography.sass */
+  /* line 45, ../resources/sass/framework/_typography.sass */
   h2, h3, h4 {
     margin: 20px 0 -15px;
     font-size: 20px;
   }
 
-  /* line 46, ../resources/sass/framework/_typography.sass */
+  /* line 49, ../resources/sass/framework/_typography.sass */
   h3 {
     font-size: 16px;
   }
 
-  /* line 49, ../resources/sass/framework/_typography.sass */
+  /* line 52, ../resources/sass/framework/_typography.sass */
   p {
     margin-top: 20px;
   }
 
-  /* line 52, ../resources/sass/framework/_typography.sass */
+  /* line 55, ../resources/sass/framework/_typography.sass */
   blockquote {
     margin: 20px 20px 0;
     padding-left: 10px;
