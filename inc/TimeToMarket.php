@@ -37,6 +37,11 @@ class TimeToMarket {
 		return $menu->name;
 	}
 
+	public static function is_startpage() {
+		$startpage  = is_front_page() && is_home() && ! is_paged();
+		return $startpage;
+	}
+
 	public static function logo() {
 		$theme_logo = get_theme_mod( 'minutemailer_logo' );
 		$html       = '<a href="' . esc_url( get_option( 'ttm_company_url' ) ) . '">';
@@ -50,6 +55,10 @@ class TimeToMarket {
 		$html .= '</a>';
 
 		return $html;
+	}
+
+	public static function blog_home_link() {
+		return '<span class="blog-home"><a href="' . esc_url( home_url() ) . '">' . get_bloginfo( 'name' ) . '</a></span>';
 	}
 
 	public static function featuredImage() {

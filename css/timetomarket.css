@@ -501,6 +501,10 @@ ul, ol {
   width: 180px;
 }
 /* line 6, ../resources/sass/atoms/_logo.sass */
+.logo a {
+  display: block;
+}
+/* line 9, ../resources/sass/atoms/_logo.sass */
 .logo img {
   display: block;
 }
@@ -561,6 +565,26 @@ ul, ol {
   }
 }
 
+/* line 1, ../resources/sass/atoms/_blog-home.sass */
+.blog-home {
+  padding-left: 10px;
+  margin-left: 10px;
+  border-left: 1px solid #39bee6;
+  font-weight: 400;
+  position: absolute;
+  top: 50%;
+  left: 180px;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  white-space: nowrap;
+}
+/* line 12, ../resources/sass/atoms/_blog-home.sass */
+.blog-home a {
+  font-weight: 400;
+}
+
 /* line 1, ../resources/sass/molecules/_header.sass */
 .main-header {
   position: absolute;
@@ -582,6 +606,10 @@ ul, ol {
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+/* line 17, ../resources/sass/molecules/_header.sass */
+.main-header__logo .logo {
+  float: left;
 }
 /* line , ../resources/sass/_config.sass */
 .main-header__nav {
@@ -605,7 +633,7 @@ ul, ol {
   .main-header {
     height: 46px;
   }
-  /* line 33, ../resources/sass/molecules/_header.sass */
+  /* line 36, ../resources/sass/molecules/_header.sass */
   .main-header .wrapper {
     height: 46px;
   }

@@ -5,8 +5,11 @@
 
 			<header class="main-header">
 				<div class="wrapper">
-					<div class="main-header__logo logo">
-						<?php echo TimeToMarket::logo(); ?>
+					<div class="main-header__logo">
+						<div class="logo">
+							<?php echo TimeToMarket::logo(); ?>
+						</div>
+						<?php if ( ! TimeToMarket::is_startpage() ) echo TimeToMarket::blog_home_link(); ?>
 					</div>
 					
 					<?php $items = TimeToMarket::menu_items( 'primary' ); if ( $items ): ?>
