@@ -856,3 +856,55 @@ strong {
     margin-top: 40px;
   }
 }
+
+/* line 1, ../resources/sass/molecules/_author.sass */
+.author {
+  overflow: hidden;
+  position: relative;
+  margin-top: 40px;
+  font-size: 16px;
+  padding-top: 40px;
+  border-top: 1px solid #e1e7ea;
+}
+/* line 9, ../resources/sass/molecules/_author.sass */
+.author p {
+  margin: 0;
+}
+/* line , ../resources/sass/_config.sass */
+.author__photo {
+  float: left;
+  margin-right: 20px;
+}
+/* line , ../resources/sass/_config.sass */
+.author__img {
+  border-radius: 50%;
+}
+/* line , ../resources/sass/_config.sass */
+.author__content {
+  overflow: hidden;
+}
+/* line , ../resources/sass/_config.sass */
+.author__bio {
+  padding: 0;
+  margin: -10px 0 0;
+}
+/* line 26, ../resources/sass/molecules/_author.sass */
+.author__bio p {
+  margin: 10px 0 0;
+}
+/* line , ../resources/sass/_config.sass */
+.author__caption {
+  margin-top: 10px;
+}
+/* line , ../resources/sass/_config.sass */
+.author__name {
+  font-weight: 600;
+  display: block;
+}
+/* line , ../resources/sass/_config.sass */
+.author__more {
+  font-style: normal;
+  font-size: 12px;
+  color: #2f3233;
+  text-decoration: underline;
+}
