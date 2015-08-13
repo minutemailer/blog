@@ -60,4 +60,31 @@ class TimeToMarket {
 		}
 	}
 
+	public static function title() {
+		$html  = '<header class="section-title">';
+
+		global $wp_query;
+		
+		if ( is_category() ) {
+			$title = single_cat_title( '', FALSE ) . ' ' . __( 'posts', LANG_DOMAIN );
+		} elseif ( is_author() ) {
+			$author_obj = $wp_query->get_queried_object();
+			$title = __( 'Posts by', LANG_DOMAIN ) . ' ' . $author_obj->display_name;
+		} else {
+			$title = get_bloginfo( 'name' );
+		}
+
+		$html .= '<h1 class="section-title__heading">' . $title . '</h1>';
+
+		$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+
+		if ( $paged > 1 ) {
+			$html .= '<span class="section-title__sub">' . __( 'Page', LANG_DOMAIN ) . ' ' . $paged . ' ' . __( 'out of', LANG_DOMAIN ) . ' ' . $wp_query->max_num_pages . '</span>';
+		}
+
+		$html .= '</header>';
+
+		return $html;
+	}
+
 }

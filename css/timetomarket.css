@@ -522,20 +522,26 @@ ul, ol {
 
 /* line 1, ../resources/sass/atoms/_section-title.sass */
 .section-title {
-  font-size: 54px;
-  font-weight: 300;
-  color: #39bee6;
   text-align: center;
   padding-bottom: 40px;
   border-bottom: 1px solid #e1e7ea;
   margin-top: 40px;
 }
+/* line , ../resources/sass/_config.sass */
+.section-title__heading {
+  font-size: 54px;
+  font-weight: 300;
+  color: #39bee6;
+}
 @media (max-width: 700px) {
   /* line 1, ../resources/sass/atoms/_section-title.sass */
   .section-title {
-    font-size: 27px;
     margin-top: 20px;
     padding-bottom: 20px;
+  }
+  /* line , ../resources/sass/_config.sass */
+  .section-title__heading {
+    font-size: 27px;
   }
 }
 

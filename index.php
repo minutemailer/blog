@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 		<div class="wrapper">
-			<h1 class="section-title"><?php bloginfo( 'name' ); ?></h1>
+			<?php echo TimeToMarket::title(); ?>
 		</div>
 
 		<div class="articles">
