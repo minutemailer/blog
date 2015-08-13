@@ -763,8 +763,9 @@ ul, ol {
   text-decoration: none;
   color: #2f3233;
   display: block;
+  font-weight: normal;
 }
-/* line 38, ../resources/sass/molecules/_footer.sass */
+/* line 39, ../resources/sass/molecules/_footer.sass */
 .main-footer__columns__column__links__link a:hover {
   text-decoration: underline;
 }
