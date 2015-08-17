@@ -9,7 +9,7 @@
 				<?php while ( have_posts() ) : the_post(); ?>
 				<article class="articles__article">
 					<?php the_title( sprintf( '<h1 class="articles__article__title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-					<div class="meta"><?php echo get_the_date(); ?> <?php the_category( ', ' ); ?></div>
+					<div class="meta"><!--<?php echo get_the_date(); ?>-->In the category <?php the_category( ', ' ); ?></div>
 
 					<?php TimeToMarket::featuredImage(); ?>
 
