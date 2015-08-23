@@ -297,34 +297,57 @@ strong {
   font-weight: 600;
 }
 
+/* line 41, ../resources/sass/framework/_typography.sass */
+.wp-caption {
+  max-width: 100%;
+}
+/* line 44, ../resources/sass/framework/_typography.sass */
+.wp-caption a {
+  display: block;
+}
+
+/* line 47, ../resources/sass/framework/_typography.sass */
+.wp-caption-text {
+  font-size: 14px;
+  font-style: italic;
+  text-align: center;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+
+/* line 54, ../resources/sass/framework/_typography.sass */
+.size-timetomarket-full-width {
+  display: block;
+}
+
 @media (max-width: 700px) {
-  /* line 42, ../resources/sass/framework/_typography.sass */
+  /* line 58, ../resources/sass/framework/_typography.sass */
   html {
     font-size: 16px;
   }
 
-  /* line 45, ../resources/sass/framework/_typography.sass */
+  /* line 61, ../resources/sass/framework/_typography.sass */
   h1 {
     font-size: 26px;
   }
 
-  /* line 48, ../resources/sass/framework/_typography.sass */
+  /* line 64, ../resources/sass/framework/_typography.sass */
   h2, h3, h4 {
     margin: 20px 0 -15px;
     font-size: 20px;
   }
 
-  /* line 52, ../resources/sass/framework/_typography.sass */
+  /* line 68, ../resources/sass/framework/_typography.sass */
   h3 {
     font-size: 16px;
   }
 
-  /* line 55, ../resources/sass/framework/_typography.sass */
+  /* line 71, ../resources/sass/framework/_typography.sass */
   p {
     margin-top: 20px;
   }
 
-  /* line 58, ../resources/sass/framework/_typography.sass */
+  /* line 74, ../resources/sass/framework/_typography.sass */
   blockquote {
     margin: 20px 20px 0;
     padding-left: 10px;
