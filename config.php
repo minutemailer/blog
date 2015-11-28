@@ -1,8 +1,5 @@
 <?php
 
-/** GLOBALS */
-
-
 /** DEV Version */
 define( 'VERSION', time() );
 
